@@ -6,7 +6,7 @@
 class Governmental : public Company
 {
 public:
-    Governmental(QString &Name, QList<QString> &Owners, double Income, double Area, int EmpNumber);
+    Governmental(QString Name, QList<QString> Owners, double Income, double Area, int EmpNumber);
     type getCompType();
     double getCompTax();
 };
@@ -14,7 +14,7 @@ public:
 class International : public Company
 {
 public:
-    International(QString &Name, QList<QString> &Owners, double Income, double Area, int EmpNumber);
+    International(QString Name, QList<QString> Owners, double Income, double Area, int EmpNumber);
     type getCompType();
     double getCompTax();
 };
@@ -22,7 +22,7 @@ public:
 class General : public Company
 {
 public:
-    General(QString &Name, QList<QString> &Owners, double Income, double Area, int EmpNumber);
+    General(QString Name, QList<QString> Owners, double Income, double Area, int EmpNumber);
     type getCompType();
     double getCompTax();
 };
