@@ -75,33 +75,28 @@ void CompaniesInfo() // Название предприятия по типу
 int main(int argc, char *argv[])
 {
       QCoreApplication a(argc, argv);
-      QList<QString> Ow, Oww, Owww, Aw, Aww;
+      QList<QString> owner1, owner2, owner3, owner4, owner5;
 
-      QString M = "Gazprom";
-      Ow << "Zubkov Viktor";
-      Company* gaz = new Governmental(M, Ow, 162000000000, 466000, 30000);
+      owner1 << "Zubkov Viktor";
+      Company* company1 = new Governmental("Gazprom", owner1, 162000000000, 466000, 30000);
 
-      QString Mm = "Philip Morris International";
-      Oww << "Andre Calantzopoulos";
-      Company* sig = new International(Mm, Oww, 7728000000, 91000, 2137);
+      owner2 << "Andre Calantzopoulos";
+      Company* company2 = new International("Philip Morris International", owner2, 7728000000, 91000, 2137);
 
-      QString Mmm = "Bentley Motors";
-      Owww << "Franz-Josef Paefgen";
-      Company* car = new General(Mmm, Owww, 1030000000, 3726, 1660);
+      owner3 << "Franz-Josef Paefgen";
+      Company* company3 = new General("Bentley Motors", owner3, 1030000000, 3726, 1660);
 
-      QString N = "Megafon";
-      Aw << "Vladimir Streshinsky";
-      Company* meg = new Governmental(N, Aw, 337000000, 25000, 9000);
+      owner4 << "Vladimir Streshinsky";
+      Company* company4 = new Governmental("Megafon", owner4, 337000000, 25000, 9000);
 
-      QString Nn = "Adidas";
-      Aww << "Rupert Campbell";
-      Company* ad = new International(Nn, Aww, 1702000000, 57016, 12000);
+      owner5 << "Rupert Campbell";
+      Company* company5 = new International("Adidas", owner5, 1702000000, 57016, 12000);
 
-      Reg.AddCompany(*gaz);
-      Reg.AddCompany(*sig);
-      Reg.AddCompany(*car);
-      Reg.AddCompany(*meg);
-      Reg.AddCompany(*ad);
+      Reg.AddCompany(*company1);
+      Reg.AddCompany(*company2);
+      Reg.AddCompany(*company3);
+      Reg.AddCompany(*company4);
+      Reg.AddCompany(*company5);
       cout << "Choose company type" << Qt::endl;
       int k;
       cin >> k;
@@ -110,5 +105,6 @@ int main(int argc, char *argv[])
       OwnersCompanies("Andre Calantzopoulos");
       cout << Qt::endl;
       CompaniesInfo();
+
       return a.exec();
 }

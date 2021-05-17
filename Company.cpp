@@ -1,6 +1,6 @@
 #include "Company.h"
 
-Company::Company(QString &Name, QList<QString> &Owners, double Income, double Area, int EmpNumber)
+Company::Company(QString Name, QList<QString> Owners, double Income, double Area, int EmpNumber)
 {
     CompanyName = Name;
     CompanyOwners = Owners;

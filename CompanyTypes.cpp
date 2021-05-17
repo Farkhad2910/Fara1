@@ -1,7 +1,7 @@
 #include "Company.h"
 #include "CompanyTypes.h"
 
-Governmental::Governmental(QString &Name, QList<QString> &Owners, double Income, double Area, int EmpNumber):
+Governmental::Governmental(QString Name, QList<QString> Owners, double Income, double Area, int EmpNumber):
     Company(Name, Owners, Income, Area, EmpNumber)
 {
 }
@@ -17,7 +17,7 @@ double Governmental::getCompTax()
     return GoverIncome;
 }
 
-International::International(QString &Name, QList<QString> &Owners, double Income, double Area, int EmpNumber):
+International::International(QString Name, QList<QString> Owners, double Income, double Area, int EmpNumber):
     Company(Name, Owners, Income, Area, EmpNumber)
 {
 }
@@ -34,7 +34,7 @@ double International::getCompTax()
 }
 
 
-General::General(QString &Name, QList<QString> &Owners, double Income, double Area, int EmpNumber):
+General::General(QString Name, QList<QString> Owners, double Income, double Area, int EmpNumber):
     Company(Name, Owners, Income, Area, EmpNumber)
 {
 }

@@ -23,7 +23,7 @@ public:
     void setRevenue(double Income_);
     void setArea(double Area_);
     void setEmployeesNumber(int EmpNumber_);
-    Company(QString &Name, QList<QString> &Owners, double Income, double Area, int EmpNumber);
+    Company(QString Name, QList<QString> Owners, double Income, double Area, int EmpNumber);
     virtual ~Company();
     virtual type getCompType() = 0;
     virtual double getCompTax() = 0;
